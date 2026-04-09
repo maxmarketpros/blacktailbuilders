@@ -55,6 +55,21 @@ const projects = [
     category: "Outdoor Living",
   },
   {
+    imageSrc: "/images/coastal-deck-sunset.webp",
+    imageAlt: "Coastal deck overlooking waterfront at sunset",
+    category: "Outdoor Living",
+  },
+  {
+    imageSrc: "/images/coastal-deck-golden.webp",
+    imageAlt: "Waterfront deck with golden hour light over the bay",
+    category: "Outdoor Living",
+  },
+  {
+    imageSrc: "/images/coastal-walkway-dusk.webp",
+    imageAlt: "Lit walkway along the waterfront at dusk",
+    category: "Outdoor Living",
+  },
+  {
     imageSrc: "/images/home-ranch-front.webp",
     imageAlt: "Large custom home under construction",
     category: "Custom Homes",
