@@ -167,7 +167,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <SectionHeading label="About Us" heading="Rooted in Riddle, Oregon" />
+              <SectionHeading label="About Us" heading="Rooted in Roseburg, Oregon" />
               <p className="mt-8 text-text-secondary text-base leading-relaxed">
                 Blacktail Builders LLC was founded by a craftsman whose career
                 was shaped building award-winning custom homes in Montana. That
