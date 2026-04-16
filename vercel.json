@@ -1,0 +1,34 @@
+{
+  "redirects": [
+    {
+      "source": "/blacktail-builders-llc-community-projects-sustainability-initiatives--541--378-6971",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-projects",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/contact-blacktail-builders-llc-fine-woodworking-custom-builds-541-378-6971",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/client-testimonials-blacktail-builders-llc-fine-woodworking-custom-builds--541--378-6971",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/woodworking-services-douglas-county-oregon",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blacktail-builders-llc-consultation-design-services--541--378-6971",
+      "destination": "/services",
+      "permanent": true
+    }
+  ]
+}
