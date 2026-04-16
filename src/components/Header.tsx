@@ -12,6 +12,11 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hasHero, setHasHero] = useState(true);
+
+  useEffect(() => {
+    setHasHero(!!document.querySelector("[data-hero]"));
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -19,6 +24,8 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const dark = scrolled || menuOpen || !hasHero;
 
   useEffect(() => {
     if (menuOpen) {
@@ -34,7 +41,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || menuOpen
+        dark
           ? "bg-white border-b border-gray-200"
           : "bg-transparent"
       }`}
@@ -46,7 +53,7 @@ export default function Header() {
             src="/logos/logo-header.png"
             alt="Blacktail Builders LLC"
             className={`h-12 lg:h-16 w-auto transition-all duration-300 ${
-              !scrolled && !menuOpen ? "invert brightness-200" : ""
+              !dark ? "invert brightness-200" : ""
             }`}
           />
         </Link>
@@ -58,7 +65,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               className={`text-sm font-medium uppercase tracking-wider transition-colors ${
-                scrolled
+                dark
                   ? "text-charcoal hover:text-accent"
                   : "text-white hover:text-stone"
               }`}
@@ -69,7 +76,7 @@ export default function Header() {
           <Link
             href="/contact"
             className={`text-sm font-semibold uppercase tracking-wider px-6 py-2.5 border transition-colors ${
-              scrolled
+              dark
                 ? "border-charcoal text-charcoal hover:bg-charcoal hover:text-white"
                 : "border-white text-white hover:bg-white hover:text-charcoal"
             }`}
@@ -88,7 +95,7 @@ export default function Header() {
             className={`block w-6 h-0.5 transition-all duration-300 ${
               menuOpen
                 ? "rotate-45 translate-y-2 bg-charcoal"
-                : scrolled
+                : dark
                   ? "bg-charcoal"
                   : "bg-white"
             }`}
@@ -97,7 +104,7 @@ export default function Header() {
             className={`block w-6 h-0.5 transition-all duration-300 ${
               menuOpen
                 ? "opacity-0"
-                : scrolled
+                : dark
                   ? "bg-charcoal"
                   : "bg-white"
             }`}
@@ -106,7 +113,7 @@ export default function Header() {
             className={`block w-6 h-0.5 transition-all duration-300 ${
               menuOpen
                 ? "-rotate-45 -translate-y-2 bg-charcoal"
-                : scrolled
+                : dark
                   ? "bg-charcoal"
                   : "bg-white"
             }`}

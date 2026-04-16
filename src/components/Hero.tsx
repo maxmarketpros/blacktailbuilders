@@ -22,7 +22,7 @@ export default function Hero({
   };
 
   return (
-    <section className={`relative ${heightClasses[height]} overflow-hidden`}>
+    <section data-hero className={`relative ${heightClasses[height]} overflow-hidden`}>
       {/* Background Image */}
       <picture>
         {imageMobileSrc && (
